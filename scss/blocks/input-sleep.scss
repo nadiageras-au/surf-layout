@@ -1,0 +1,70 @@
+@import "../vars";
+
+.quantity {
+    position: relative;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button
+  {
+    display: none;
+    margin: 0;
+  }
+  
+  input[type=number]
+  {
+    -moz-appearance: textfield;
+  }
+  
+  .quantity input {
+    width: 55px;
+    height: 36px;
+    float: left;
+    display: block;
+    border: none;
+    background: transparent;
+    color: $white;
+    font-weight: 800;
+    font-size: inherit;
+    font-family: inherit;
+  }
+  
+  .quantity input:focus {
+    outline: 0;
+  }
+  
+  .quantity-nav {
+    float: left;
+    position: relative;
+    height: 42px;
+  }
+  
+  .quantity-button {
+    position: relative;
+    cursor: pointer;
+    border-left: 1px solid #eee;
+    width: 20px;
+    text-align: center;
+    color: #333;
+    font-size: 13px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+    line-height: 1.7;
+    transform: translateX(-100%);
+    user-select: none;
+  }
+  
+  .quantity-button.quantity-up {
+    position: absolute;
+    border: none;
+    left: 170px;
+    height: 15px;
+    bottom: -20px;
+  }
+  
+  .quantity-button.quantity-down {
+    position: absolute;
+    border: none;
+    bottom: -26px;
+    left: 135px;
+    height: 15px;
+  }

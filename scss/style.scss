@@ -1,0 +1,166 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+.header {
+    height: 100vh;
+    position: relative;
+}
+
+.header__map {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+}
+
+.header__title {
+   font-size: 20rem; 
+   color: rgba($white, .07);
+   font-weight: 800;
+   line-height: 15.6rem;
+
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 5;
+   max-width: 46.7rem;
+}
+/* Aside*/
+.header__aside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    height: 100vh;
+  
+    text-align: center;
+
+    border-right: 1px solid rgba($white, .25);
+
+    .logo {
+        margin-bottom: 8rem;
+    }
+}
+
+.header__search {
+    margin-bottom: 2.5rem;
+}
+
+.header__date {
+    font-size: 7.2rem;
+    line-height: 1;
+    font-weight: 800;
+    margin-bottom: 2.5rem;
+
+    span {
+        display: block;
+        font-size: 1.6rem;
+        letter-spacing: 1.4px;
+        font-weight: 300;
+        padding-top: 5px;
+    }
+}
+
+.header__location {
+    display: inline-block;
+    font-size: 1.2rem;
+    letter-spacing: 1.05px;
+    font-weight: 300;
+    position: relative;
+    padding-left: 1.9rem;
+    text-transform: capitalize;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 11px;
+        height: 13px;
+        background-image: url('../images/tag-map.svg'); 
+        left: 0;
+        top: 0;
+    }
+}
+.header__arrows {
+    position: absolute; 
+    left: 210px;
+    bottom: 30px;  
+    z-index: 3;
+}
+
+.line-animation {
+    stroke-dashoffset: 600;
+    stroke-dasharray: 600;
+    animation: animdash 5s infinite 6s;
+}
+
+@keyframes animdash {
+    to {
+        stroke-dashoffset: 0;  
+    }
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+
+    &--shop {
+        margin-bottom: 4.5rem;
+       .description__head {
+            max-width: 35rem;
+        }
+    }
+}
+
+.rating__stars {
+    display: flex;
+    width: 15.4rem;
+    height: 2.2rem;
+    justify-content: space-between;
+    margin-left: 2.5rem;
+
+    &--left {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+}
+
+.footer {
+    padding: 28.5rem 0 3.5rem;
+
+    .btn {
+        margin-bottom: 2.7rem;
+        span{
+            padding-right: 17px;
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__copy {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: rgba($white, .5rem);
+        letter-spacing: 1.05px;
+    }
+}
+
+
+
+
+
+@import "blocks/header-slider";
+@import "blocks/nav";
+@import "blocks/surf";
+@import "blocks/holder";
+@import "blocks/sleep";
+@import "blocks/input-sleep";
+@import "blocks/shop";
+
+
+
+@import "media";
